@@ -1,9 +1,9 @@
 # Healthcare-Analytics-Length-of-Stay-Project
 Developed a reusable analytics layer for a Length of Stay (LOS) prediction model by transforming complex healthcare operational and financial data into clean, ML-ready feature views. These SQL assets served BI dashboards, ad-hoc analysis, and predictive modeling pipelines, balancing data quality, business logic, and performance.
-💡 Core Contributions
+# Core Contributions
 1. Layered Data Transformation with CTEs
 Built modular, maintainable SQL views using Common Table Expressions to enforce data quality and business rules.
-/WITH base AS (
+## WITH base AS (
     SELECT DISTINCT patient_id, diagnosis_code, metric_name, value, recorded_time
     FROM raw_clinical_data
     WHERE sort_order = 10  -- Primary diagnosis only
